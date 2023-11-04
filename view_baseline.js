@@ -353,10 +353,17 @@ $('#adv_perm_inheritance').change(function(){
     else {
         // has just been turned off - pop up dialog with add/remove/cancel
         $(`<div id="add_remove_cancel" title="Security">
-            Warning: if you proceed, inheritable permissions will no longer propagate to this object.<br/>
-            - Click Add to convert and add inherited parent permissions as explicit permissions on this object<br/>
-            - Click Remove to remove inherited parent permissions from this object<br/>
-            - Click Cancel if you do not want to modify inheritance settings at this time.<br/>
+            <b>Warning:</b>
+            If you proceed, inheritable permissions will no longer propagate to this object.
+            <br>
+            Proceed with one of the 3 options below:<br/>
+            <br>
+            <li>Click <b>Add:</b> to convert and add inherited parent permissions as explicit permissions.</li>
+            <br/>
+            <li>Click <b>Remove:</b> to remove inherited parent permissions.</li>
+            <br/>
+            <li>Click <b>Cancel:</b> to leave the inheritance settings as is.</li>
+            <br/>
         </div>`).dialog({ // TODO: don't create this dialog on the fly
             modal: true,
             width: 400,
@@ -409,7 +416,12 @@ $('#adv_perm_replace_child_permissions').change(function(){
         let filepath = $('#advdialog').attr('filepath')
         let file_obj = path_to_file[filepath]
         $(`<div id="replace_perm_dialog" title="Security">
-            This will replace explicitly defined permissions on all descendants of this object with inheritable permissions from ${file_obj.filename}.<br/>
+            <b>Warning:</b>
+            <br>
+            This change will affect the permissions for: ${file_obj.filename}
+            <br><br>
+            Selecting this option will replace the <b>explicitly defined</b> permissions on all descendants of this object with <b>inheritable</b> permissions.
+            <br><br>
             Do you wish to continue?
         </div>`).dialog({
             modal: true,
