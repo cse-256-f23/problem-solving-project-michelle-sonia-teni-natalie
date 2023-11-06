@@ -519,3 +519,23 @@ $('#filestructure').css({
     'vertical-align': 'top'
 })
 $('#filestructure').after('<div id="sidepanel" style="display:inline-block;width:49%"></div>')
+
+$('#column.column2').css({
+    'padding':'10px',
+})
+
+// $('#column').css({
+//     'float':'left',
+//     'width':'50%',
+//     'padding':'10px',
+// })
+
+// $('.row:after').css({
+//     'display':'table',
+//     'clear':'both',
+//     'content':'',
+// })
+
+// $('#wrapper').css({
+//     'box-sizing':'border-box',
+// })
