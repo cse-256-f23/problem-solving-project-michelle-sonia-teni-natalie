@@ -1,13 +1,23 @@
 // ---- Define your dialogs  and panels here ----
 
+$('#sidepanel').prepend('<h2>Select File and Member to see permissions:</h2>');
+// ---- Permissions Table -------
 var new_perm_table = define_new_effective_permissions("newPermissionsTable_", add_info_col = true, which_permissions = null);
 $('#sidepanel').append(new_perm_table);
 
 
 $('#newPermissionsTable_').attr('filepath', '/C/presentation_documents/important_file.txt');
-var new_user_field = define_new_user_select_field("newUserSelectField_", "Select", on_user_change = function(selected_user){
+var new_user_field = define_new_user_select_field("newUserSelectField_", "Select User", on_user_change = function(selected_user){
     $('#newPermissionsTable_').attr('username', selected_user);
 });
+
+$('#newPermissionsTable_').attr('username', 'employee1');
+var new_file_field = define_new_file_select_field("newFileSelectField_", "Select File", on_file_change = function(selected_file){
+    $('#newPermissionsTable_').attr('filepath', selected_file);
+    console.log("Current File: ", selected_file);
+});
+
+$('#sidepanel').append(new_file_field);
 $('#sidepanel').append(new_user_field);
 
 var new_dialog = define_new_dialog('newDialog_', title='Info', options = {})
