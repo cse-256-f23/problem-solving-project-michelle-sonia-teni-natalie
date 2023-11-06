@@ -84,6 +84,9 @@
         </div>
         <div id="wrapper">
             <div data-app="gender-mag" data-mode="tracker" id="html-loc" data-tag="">
+            <div class="row" id="row">
+                <div class="column1" id="column">
+                
                 <!-- div where file and folder structure will be generated:-->
                 <div id="filestructure"></div>
                 <!-- structure for Permission Entry dialog: -->
@@ -206,6 +209,27 @@
                 <script src="view_helper.js"></script>
                 <script src="view_baseline.js"></script>
                 <script src="view.js"></script>
+                </div>
+
+                <br>
+                <div class="column2" id="column" style="padding:30px">
+                    <h2>How do allow/deny permissions work:</h2>
+                    <ol> 
+                        <li>Direct permissions take precedence over inherited permissions (if any)
+                            <ul>
+                                <li>Inherited permissions at a "closer" level to the file in question take precedence over ones that are "further" (e.g. parent permissions take precedence over grandparent permissions) </li>
+                            </ul>
+                        </li>
+                        <li>Within the same inheritance level, "deny" permissions take precedence over "allow" permissions.</li>
+                        <li>Examples
+                            <ul>
+                                <li>If a user has a (direct) "allow" permission for a file, but they are also part of a group which has a (direct) "deny" permission set on the same file, they are denied that permission </li>
+                                <li>If a user has an "allow" permission set on a file, but a "deny" permission (for that same action) set on the folder which contains that file, they are allowed to perform that action. </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                </div>
             </div>
         </div>
     </div>
