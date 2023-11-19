@@ -420,7 +420,7 @@ $('#adv_perm_replace_child_permissions').change(function(){
             <br>
             This change will affect the permissions for: ${file_obj.filename}
             <br><br>
-            Selecting this option will replace the <b>explicitly defined</b> permissions on all descendants of this object with <b>inheritable</b> permissions.
+            Selecting this option will replace the <b>explicitly defined</b> permissions on all descendants (files/folders) of this object with <b>inheritable</b> permissions.
             <br><br>
             Do you wish to continue?
         </div>`).dialog({
