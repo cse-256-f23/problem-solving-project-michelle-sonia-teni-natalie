@@ -1,6 +1,6 @@
 // ---- Define your dialogs  and panels here ----
 
-$('#sidepanel').prepend('<h2>Select File and Member to see permissions:</h2>');
+$('#sidepanel').prepend('<h2>Select File and Member to see permissions:</h2>','<h3>Remember to double check your changes in the permissions table to the right before you submit</h3>','<p>Click on the info logo to see whether the actions are allowed or not</p>');
 // ---- Permissions Table -------
 var new_perm_table = define_new_effective_permissions("newPermissionsTable_", add_info_col = true, which_permissions = null);
 $('#sidepanel').append(new_perm_table);
