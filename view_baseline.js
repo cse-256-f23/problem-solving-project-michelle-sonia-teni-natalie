@@ -33,6 +33,8 @@ obj_name_div = $('<div id="permdialog_objname" class="section">Object Name: <spa
 
 //Make the div with the explanation about special permissions/advanced settings:
 advanced_expl_div = $('<div id="permdialog_advanced_explantion_text">For permissions, changing ownership, and effective permissions, click Advanced.</div>')
+advanced_direct_tip = $('<div id="permdialog_advanced_direct_tip_text"><i>Tip: Make sure your direct permissions are as precise as possible!</i></div>')
+
 
 // Make the (grouped) permission checkboxes table:
 grouped_permissions = define_grouped_permission_checkboxes('permdialog_grouped_permissions')
@@ -151,7 +153,10 @@ perm_dialog.append(perm_add_user_select)
 perm_add_user_select.append(perm_remove_user_button) // Cheating a bit again - add the remove button the the 'add user select' div, just so it shows up on the same line.
 perm_dialog.append($('<div id="permissions_perms_title">Direct Permissions</div>'))
 perm_dialog.append(grouped_permissions)
+perm_dialog.append(advanced_direct_tip)
+perm_dialog.append($('<br>'))
 perm_dialog.append(advanced_expl_div)
+
 
 // --- Additional logic for reloading contents when needed: ---
 //Define an observer which will propagate perm_dialog's filepath attribute to all the relevant elements, whenever it changes:
