@@ -214,7 +214,7 @@
                 </div>
 
                 <br>
-                <div class="column2" id="column" style="padding:30px">
+                <div class="column2" id="column2" style="padding:30px">
                     <h2>How do allow/deny permissions work:</h2>
                     <ol> 
                         <li>Direct permissions take precedence over inherited permissions (if any)
@@ -230,6 +230,30 @@
                             </ul>
                         </li>
                     </ol>
+
+                    <br>
+
+                    <h2>Special Permissions:</h2>
+                    <ul>
+                        <li>
+                            The permission settings for a given file & user can't be described by the 5 categories above then "Special Permissions" is also checked on screens which use these categories.
+                        </li>
+                    </ul>
+
+                    <br>
+                    
+                    <h2>If you've reached <u>Advanced Security Settings</u>,</h2>
+                    <ul>
+                        <li>
+                            <strong>Remove</strong> just unsets the flag on the file.
+                        </li>
+                        <li>
+                            <strong>Add</strong> unsets the flag, and copies over the permissions that used to be inherited (so there is no immediate change in permission settings, but the inheritance is broken)
+                        </li>   
+                        <li>  
+                            <strong>Cancel</strong> is as it sounds.
+                        </li>
+                    </ul>
                 </div>
                 </div>
             </div>
