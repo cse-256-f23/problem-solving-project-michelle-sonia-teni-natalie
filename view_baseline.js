@@ -367,14 +367,14 @@ $('#adv_perm_inheritance').change(function(){
         $(`<div id="add_remove_cancel" title="Security">
             <b>Warning:</b>
             If you proceed, inheritable permissions will no longer propagate to this object.
-            <br>
+            <br><br>
             Proceed with one of the 3 options below:<br/>
             <br>
-            <li>Click <b>Add:</b> to convert and add inherited parent permissions as explicit permissions.</li>
+            <li><b>Add:</b> to convert and add inherited parent permissions as explicit permissions.</li>
             <br/>
-            <li>Click <b>Remove:</b> to remove inherited parent permissions.</li>
+            <li><b>Remove:</b> to remove inherited parent permissions.</li>
             <br/>
-            <li>Click <b>Cancel:</b> to leave the inheritance settings as is.</li>
+            <li><b>Cancel:</b> to leave the inheritance settings as is.</li>
             <br/>
         </div>`).dialog({ // TODO: don't create this dialog on the fly
             modal: true,
