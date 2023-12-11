@@ -217,9 +217,9 @@
                 <div class="column2" id="column2" style="padding:30px">
                     <h2>How do allow/deny permissions work:</h2>
                     <ol> 
-                        <li>Direct permissions take precedence over inherited permissions (if any)
+                        <li><strong>Direct permissions</strong> take precedence over inherited permissions (if any)
                             <ul>
-                                <li>Inherited permissions at a "closer" level to the file in question take precedence over ones that are "further" (e.g. parent permissions take precedence over grandparent permissions) </li>
+                                <li><strong>Inherited permissions</strong> at a "closer" level to the file in question take precedence over ones that are "further" (e.g. parent permissions take precedence over grandparent permissions) </li>
                             </ul>
                         </li>
                         <li>Within the same inheritance level, "deny" permissions take precedence over "allow" permissions.</li>
@@ -230,6 +230,25 @@
                             </ul>
                         </li>
                     </ol>
+
+                    <br>
+
+                    <h2>Remove permissions:</h2>
+                    <ul>
+                        <li>
+                            denying permissions is prioritized over allowing permissions in the same inheritance level. 
+                            To prevent a user from <u>making changes</u>, deny their <u>write</u> permission.
+                        </li>
+                    </ul>
+
+                    <br>
+
+                    <h2>Add permissions:</h2>
+                    <ul>
+                        <li>
+                            allow permissions for users.
+                        </li>
+                    </ul>
 
                     <br>
 
