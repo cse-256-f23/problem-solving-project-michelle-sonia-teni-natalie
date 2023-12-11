@@ -90,7 +90,6 @@
                 <!-- div where file and folder structure will be generated:-->
                 <div id="filestructure"></div>
                 <!-- structure for Permission Entry dialog: -->
-
                 <div title="Permission Entry" id="permentry">
                     <div id="perm_entry_inheritance_explanation" style="display:none" class="section">This permission is
                         inherited from the parent object. Make changes here to override the inherited permissions.</div>
@@ -105,6 +104,8 @@
                             <th id="perm_entry_header_deny">Deny</th>
                         </tr>
                     </table>
+                    <p> Remember to double check your changes in the permissions table to the right before you submit!</p>
+
                 </div>
                 <!-- structure for the Advanced dialog: -->
                 <div title="Advanced Security Settings" id="advdialog" style="overflow:hidden">
@@ -130,6 +131,7 @@
                                         <th id="adv_perm_header_inherited">Inherited from</th>
                                     </tr>
                                 </table>
+
                             </div>
                             <button id="adv_perm_edit" class="ui-button ui-widget ui-corner-all">Edit Permissions</button>
                             <div id="adv_perm_inheritance_div">
@@ -212,7 +214,7 @@
                 </div>
 
                 <br>
-                <div class="column2" id="column" style="padding:30px">
+                <div class="column2" id="column2" style="padding:30px">
                     <h2>How do allow/deny permissions work:</h2>
                     <ol> 
                         <li>Direct permissions take precedence over inherited permissions (if any)
@@ -228,6 +230,30 @@
                             </ul>
                         </li>
                     </ol>
+
+                    <br>
+
+                    <h2>Special Permissions:</h2>
+                    <ul>
+                        <li>
+                            The permission settings for a given file & user can't be described by the 5 categories above then "Special Permissions" is also checked on screens which use these categories.
+                        </li>
+                    </ul>
+
+                    <br>
+                    
+                    <h2>If you've reached <u>Advanced Security Settings</u>,</h2>
+                    <ul>
+                        <li>
+                            <strong>Remove</strong> just unsets the flag on the file.
+                        </li>
+                        <li>
+                            <strong>Add</strong> unsets the flag, and copies over the permissions that used to be inherited (so there is no immediate change in permission settings, but the inheritance is broken)
+                        </li>   
+                        <li>  
+                            <strong>Cancel</strong> is as it sounds.
+                        </li>
+                    </ul>
                 </div>
                 </div>
             </div>
