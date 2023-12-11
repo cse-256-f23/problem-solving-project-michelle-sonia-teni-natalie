@@ -11,7 +11,7 @@ perm_dialog = define_new_dialog('permdialog', title='Permissions', options = {
     width: 400,
     buttons: {
         Advanced: {
-            text: "Advanced",
+            text: "Advanced Changes",
             id: "perm-dialog-advanced-button",
             click: function() {
                 open_advanced_dialog(perm_dialog.attr('filepath'))
@@ -32,8 +32,8 @@ perm_dialog = define_new_dialog('permdialog', title='Permissions', options = {
 obj_name_div = $('<div id="permdialog_objname" class="section">Object Name: <span id="permdialog_objname_namespan"></span> </div>')
 
 //Make the div with the explanation about special permissions/advanced settings:
-advanced_expl_div = $('<div id="permdialog_advanced_explantion_text">For permissions, changing ownership, and effective permissions, click <strong>Advanced</strong>.</div>')
-advanced_direct_tip = $('<div id="permdialog_advanced_direct_tip_text"><i>Tip: Make sure your direct permissions are as precise as possible!</i></div>')
+advanced_expl_div = $('<div id="permdialog_advanced_explantion_text">For inheritable permissions, editing child objects changing ownership, and effective permissions, click on the <strong>Advanced</strong> button. </div>')
+advanced_direct_tip = $('<div id="permdialog_advanced_direct_tip_text"><i>Tip: Make sure your direct permissions are as precise as possible (direct permissions take precedence over inheritable permissions)!</i></div>')
 advanced_perm_div = $('<div id="permdialog_advanced_permissions_text">Cant edit the above direct permissions? <br> <i>The permissions are inherited! This users permissions are part of a larger group. Proceed to Advanced to make changes to the effective permissions.</i></div>')
 
 // Make the (grouped) permission checkboxes table:
